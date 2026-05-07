@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-ENV VITE_API_BASE_URL=http://beatbuddy.local:30080
+ENV VITE_API_BASE_URL=https://starsmerchant-regardless-hash-nutrition.trycloudflare.com
 RUN npm run build
 
 FROM nginx:alpine
