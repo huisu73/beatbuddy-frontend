@@ -62,7 +62,7 @@ pipeline {
                                 string(name: 'DOCKER_IMAGE_VERSION', value: "${DOCKER_IMAGE_VERSION}"),
                                 string(name: 'SERVICE', value: 'frontend')
                             ],
-                            wait: false
+                            wait: true
                     }
                 }
             }
