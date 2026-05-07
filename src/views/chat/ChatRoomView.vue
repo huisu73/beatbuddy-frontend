@@ -233,10 +233,8 @@ onMounted(async () => {
     }
 
     await chatStore.loadMessages(roomId.value)
-    if (chatStore.isConnected) {
-      chatStore.subscribeRoom(roomId.value)
-      markRoomAsRead()
-    }
+    // ✅ subscribeRoom은 watch(isConnected)에서만 처리하도록 제거
+    markRoomAsRead()
     await scrollToBottom()
   } catch (error) {
     console.error(error)
